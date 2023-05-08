@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #141414;
+}
+
+.logo{
+    background-color: #141414;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+
+}
+.logo img{
+    height: 400px;
+    width: 400px;
+}
+
+.banner{
+    min-height: 100vh;
+    background: linear-gradient(#141414, #141414), url("banner-img.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 20px;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: 600px 550px;
+}
+.card-img{
+    background: url("images/dish.jpg") center/cover no-repeat;
+}
+.banner h2{
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.card-content{
+    background: #fff;
+    height: 330px;
+}
+.card-content h3{
+    text-align: center;
+    color: #141414;
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+}
+.form-row{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+form select, form input{
+    display: block;
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+}
+form input[type = text], form input[type = number], form input::placeholder, select{
+    color: #9a9a9a;
+}
+form input[type = button]{
+    color: #fff;
+    background: #f2745f;
+    padding: 12px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+form input[type = button]:hover{
+    opacity: 0.9;
+}
+
+.popup{
+    position:fixed;
+    top: -100vh;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0,5);
+    overflow: hidden;
+    transition: all 0ms ease-in-out 0ms ;
+}
+
+.popup .popup__content{
+    position: absolute;
+    top:150%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding: 20px;
+    width: 450px;
+    background: #f5f5f5;
+    border: radius 10px;
+}
+
+.popup .popup__content .close__popup{
+    position: absolute;
+    top:10px;
+    right:10px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    background: #888;
+    border-radius: 50%;
+    color:#eee;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.popup .popup__content .close__popup:hover{
+    background: #555;
+}
+
+.popup__content h1{
+    margin-bottom: 15px;
+    color:#222;
+}
+
+body.activepopup .container{
+    transform:translate(-50%,-50%);
+    scale: (0.85);
+    transition: all 300ms ease-in-out;
+}
+
+body.activepopup .popup{
+    top:0px;
+    transition:all 0.5s ease-in-out 10ms;
+}
+
+body.activepopup .popup .popup__content{
+    top:50%;
+    transition: all 300ms easi-in-out 100ms;
+}
+
+
+@media(max-width: 992px){
+    .card-container{
+        grid-template-columns: 100%;
+        width: 600px;
+        height: 450px;
+    }
+    .card-img{
+        height: 330px;
+    }
+}
+
+.card-container:hover{
+    transform: scale(1.075);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}

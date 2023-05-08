@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Add Dish</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style5.css">
+    </head>
+    <body>
+        <div class="logo">
+            <a href="index.html">
+            <img src="images/QVKBook (2).png" alt="">
+            </a>
+        </div>
+        <section class = "banner">
+            <h2>ADD DISH</h2>
+            <div class = "card-container">
+                <div class = "card-img">
+                    <!-- image here -->
+                </div>
+
+                <div class = "card-content">
+                    <h3>DETAILS</h3>
+                    <form>
+                        <div class = "form-row">
+                            <select name = "dish_type">
+                                <option value = "type-select">Select Type Of Dish</option>
+                                <option value = "valuecombo">Value Combo</option>
+                                <option value = "Quickmeals">Quick Meals</option>
+                                <option value = "Starters">Starters</option>
+                                <option value = "Maincourse">Main Course</option>
+                                <option value = "desserts">Desserts</option>
+                            </select>
+
+                            <select name = "Cuisine">
+                                <option value = "cuisine-select">Select Cuisine</option>
+                                <option value = "10">North-Indian</option>
+                                <option value = "10">South-Indian</option>
+                                <option value = "10">Chinese</option>
+                                <option value = "10">Italian</option>
+                                <option value = "10">Oriental</option>
+                                <option value = "10">Arabian</option>
+                            </select>
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "text" placeholder="Name Of Dish">
+                            <input type = "text" placeholder="Price">
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "number" placeholder="Serves:" min = "1">
+                            <select name="Available Discount">
+                                <option value="discount slect">Select discount</option>
+                                <option value="10">20%</option>
+                                <option value="10">30%</option>
+                                <option value="10">40%</option>
+                                <option value="10">50%</option>
+                                <option value="10">60%</option>
+                                <option value="10">70%</option>
+                            </select>
+                            <input type = "button" value = "ADD DISH" id="open__popup">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="close__popup">&times;</div>
+            <h1>Dish Added !</h1>
+            <p></p>
+        </div>
+        </div>
+        <script src="app4.js"></script>
+    </body>
+</html>
